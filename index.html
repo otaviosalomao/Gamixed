@@ -1,0 +1,78 @@
+﻿<!doctype html>
+<html lang="pt-BR" ng-app="Gamixed">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="content-language" content="pt-br" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <meta name="Description" content="{{description}}">
+    <link rel="icon" href="lib/portal-theme/img/favicon.ico" type="image/x-icon">
+
+    <script src="lib/portal-theme/js/jquery.min.js"></script>
+    <!-- Css -->
+    <link href="lib/portal-theme/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/portal-theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/portal-theme/css/select2.min.css" rel="stylesheet">
+    <link href="lib/portal-theme/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/portal-theme/css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="lib/portal-theme/css/robotodraft.min.css" rel="stylesheet">
+    <link href="lib/portal-theme/css/style.css" rel="stylesheet">
+    <link href="lib/portal-theme/css/style-blue.css" rel="stylesheet">
+    <link href="lib/portal-theme/css/responsive.css" rel="stylesheet">
+    <!-- ANGULAR -->
+    <script src="lib/angular/angular.js" charset="UTF-8"></script>
+    <script src="lib/angular/angular-route.js" charset="UTF-8"></script>
+    <script src="lib/angular/angular-messages.js" charset="UTF-8"></script>
+    <script src="lib/angular/angular-locale_pt-br.js" charset="UTF-8"></script>
+    <script src="lib/angular/angular-sanitize.js" charset="UTF-8"></script>
+    <script src="lib/ui/ui.js" charset="UTF-8"></script>
+    <script src="js/app.js" charset="UTF-8"></script>
+    <!-- CONTROLLER -->
+    <script src="js/controllers/HomeController.js" charset="UTF-8"></script>
+    <script src="js/controllers/HeaderController.js"></script>
+    <script src="js/controllers/FooterController.js"></script>
+    <script src="js/controllers/DetailController.js"></script>
+    <script src="js/controllers/ProductsController.js"></script>
+    <!-- SERVICES -->
+    <script src="js/services/detalhesProdutoAPIService.js" charset="UTF-8"></script>
+    <!-- CONFIG -->
+    <script src="js/config/routeConfig.js" charset="UTF-8"></script>
+    <script src="js/value/configValue.js" charset="UTF-8"></script>
+    <script src="js/filters/nameFilter.js" charset="UTF-8"></script>
+    <script src="js/filters/ellipsisFilter.js" charset="UTF-8"></script>
+    <script src="js/filters/upperFilter.js" charset="UTF-8"></script>
+    <script src="js/filters/textFilter.js" charset="UTF-8"></script>
+    <script src="js/directives/uiAlertDirective.js" charset="UTF-8"></script>
+    <script src="js/directives/uiDateDirective.js" charset="UTF-8"></script>
+    <script src="js/directives/headerDirective.js" charset="UTF-8"></script>
+    <script src="js/directives/footerDirective.js" charset="UTF-8"></script>
+    <script src="js/interceptors/timestampInterceptor.js" charset="UTF-8"></script>
+    <script src="js/interceptors/errorInterceptor.js" charset="UTF-8"></script>
+    <script src="js/interceptors/loadingInterceptor.js" charset="UTF-8"></script>
+    <script src="js/config/interceptorsConfig.js" charset="UTF-8"></script>
+    <script src="js/config/pageConfig.js" charset="UTF-8"></script>
+    <!--Biblioteca Js-->    
+    <script src="lib/portal-theme/js/bootstrap.min.js"></script>
+    <script src="lib/portal-theme/js/mimity.js"></script>
+    <script src="lib/portal-theme/js/select2.js"></script>
+    <script src="lib/portal-theme/js/owl.carousel.min.js"></script>    
+    <script src="lib/portal-theme/js/jquery.ez-plus.min.js"></script>  
+    <script src="lib/portal-theme/js/jquery.bootstrap-touchspin.min.js"></script>    
+    <script src="lib/portal-theme/js/jquery.raty-fa.min.js"></script>    
+</head>
+<body>
+    <div class="URL_BASE" style="display:none !important;" url=""></div>    
+    <div ng-controller="HeaderController">
+        <div header></div>
+    </div>
+    <div class="body">
+        <div ng-view></div>
+        <div class="bottom-space"></div>
+    </div>
+    <div ng-controller="FooterController">
+        <div footer></div>
+    </div>
+</body>
+</html>

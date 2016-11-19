@@ -1,0 +1,1 @@
+var app = angular.module("Gamixed", ["ngMessages", "ngRoute", "ngSanitize", "ui.select2"]);
