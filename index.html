@@ -30,29 +30,32 @@
     <script src="lib/ui/ui.js" charset="UTF-8"></script>
     <script src="js/app.js" charset="UTF-8"></script>
     <!-- CONTROLLER -->
-    <script src="js/controllers/HomeController.js" charset="UTF-8"></script>
-    <script src="js/controllers/HeaderController.js"></script>
-    <script src="js/controllers/FooterController.js"></script>
-    <script src="js/controllers/DetailController.js"></script>
-    <script src="js/controllers/ProductsController.js"></script>
+    <script src="js/controllers/public/HomeController.js" charset="UTF-8"></script>
+    <script src="js/controllers/public/HeaderController.js" charset="UTF-8"></script>
+    <script src="js/controllers/public/FooterController.js" charset="UTF-8"></script>
+    <script src="js/controllers/public/DetailController.js" charset="UTF-8"></script>
+    <script src="js/controllers/public/ProductsController.js" charset="UTF-8"></script>
+    <script src="js/controllers/public/LoginController.js" charset="UTF-8"></script>
     <!-- SERVICES -->
     <script src="js/services/productAPIService.js" charset="UTF-8"></script>
+    <script src="js/services/loginAPIService.js" charset="UTF-8"></script>
     <!-- CONFIG -->
     <script src="js/config/routeConfig.js" charset="UTF-8"></script>
     <script src="js/value/configValue.js" charset="UTF-8"></script>
     <script src="js/filters/nameFilter.js" charset="UTF-8"></script>
     <script src="js/filters/ellipsisFilter.js" charset="UTF-8"></script>
     <script src="js/filters/upperFilter.js" charset="UTF-8"></script>
-    <script src="js/filters/textFilter.js" charset="UTF-8"></script>
-    <script src="js/directives/uiAlertDirective.js" charset="UTF-8"></script>
-    <script src="js/directives/uiDateDirective.js" charset="UTF-8"></script>
-    <script src="js/directives/headerDirective.js" charset="UTF-8"></script>
-    <script src="js/directives/footerDirective.js" charset="UTF-8"></script>
+    <script src="js/filters/textFilter.js" charset="UTF-8"></script>    
     <script src="js/interceptors/timestampInterceptor.js" charset="UTF-8"></script>
     <script src="js/interceptors/errorInterceptor.js" charset="UTF-8"></script>
     <script src="js/interceptors/loadingInterceptor.js" charset="UTF-8"></script>
     <script src="js/config/interceptorsConfig.js" charset="UTF-8"></script>
     <script src="js/config/pageConfig.js" charset="UTF-8"></script>
+    <!--Directives-->    
+    <script src="js/directives/uiAlertDirective.js" charset="UTF-8"></script>
+    <script src="js/directives/uiDateDirective.js" charset="UTF-8"></script>
+    <script src="js/directives/public/headerDirective.js" charset="UTF-8"></script>
+    <script src="js/directives/public/footerDirective.js" charset="UTF-8"></script>
     <!--Biblioteca Js-->    
     <script src="lib/portal-theme/js/bootstrap.min.js"></script>
     <script src="lib/portal-theme/js/mimity.js"></script>
@@ -64,15 +67,15 @@
 </head>
 <body>
     <div class="URL_BASE" style="display:none !important;" url=""></div>    
-    <div ng-controller="HeaderController">
-        <div header></div>
+    <div ng-controller="PublicHeaderController">
+        <div publicHeader></div>
     </div>
     <div class="body">
         <div ng-view></div>
         <div class="bottom-space"></div>
     </div>
-    <div ng-controller="FooterController">
-        <div footer></div>
+    <div ng-controller="PublicFooterController">
+        <div publicFooter></div>
     </div>
 </body>
 </html>
