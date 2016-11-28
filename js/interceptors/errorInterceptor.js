@@ -1,9 +1,7 @@
 app.factory("errorInterceptor", function($q, $location, $rootScope) {
     return {
-        responseError: function(rejection) {
-            console.log(rejection);
+        responseError: function(rejection) {            
             toastr.remove();
-
             switch (rejection.status) {
                 case 400:
                     toastr.error("", rejection.data);

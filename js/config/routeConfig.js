@@ -24,9 +24,7 @@ app.config(function ($routeProvider) {
     $routeProvider.when("/error", {
         title: "erro",
         templateUrl: "view/shared/error.html"
-    });
-
-    $routeProvider.otherwise({ redirectTo: "/home" });
+    });   
 
     //RESTRICT
 
@@ -34,5 +32,9 @@ app.config(function ($routeProvider) {
         templateUrl: "view/admin/home.html",
         controller: "LoginController"
     });
+
+    //DEFAULT
+
+     $routeProvider.otherwise({ redirectTo: "/home" });
     
 });

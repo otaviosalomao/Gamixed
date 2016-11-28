@@ -1,7 +1,7 @@
-﻿app.directive('publicHeader', function () {
+﻿app.directive('publicHeader', function () {    
     return {
         restrict: 'A',
         replace: true,
-        templateUrl: 'view/shared/public/header.html'
+        templateUrl: 'view/public/header.html'
     }
 })

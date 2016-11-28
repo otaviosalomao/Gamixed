@@ -9,7 +9,7 @@
     <title>{{title}}</title>
     <meta name="Description" content="{{description}}">
     <link rel="icon" href="lib/portal-theme/img/favicon.ico" type="image/x-icon">
-
+    <!-- Jquery -->
     <script src="lib/portal-theme/js/jquery.min.js"></script>
     <!-- Css -->
     <link href="lib/portal-theme/css/bootstrap.min.css" rel="stylesheet">
@@ -21,61 +21,69 @@
     <link href="lib/portal-theme/css/style.css" rel="stylesheet">
     <link href="lib/portal-theme/css/style-blue.css" rel="stylesheet">
     <link href="lib/portal-theme/css/responsive.css" rel="stylesheet">
-    <!-- ANGULAR -->
-    <script src="lib/angular/angular.js" charset="UTF-8"></script>
-    <script src="lib/angular/angular-route.js" charset="UTF-8"></script>
-    <script src="lib/angular/angular-messages.js" charset="UTF-8"></script>
-    <script src="lib/angular/angular-locale_pt-br.js" charset="UTF-8"></script>
-    <script src="lib/angular/angular-sanitize.js" charset="UTF-8"></script>
-    <script src="lib/ui/ui.js" charset="UTF-8"></script>
-    <script src="js/app.js" charset="UTF-8"></script>
-    <!-- CONTROLLER -->
-    <script src="js/controllers/public/HomeController.js" charset="UTF-8"></script>
-    <script src="js/controllers/public/HeaderController.js" charset="UTF-8"></script>
-    <script src="js/controllers/public/FooterController.js" charset="UTF-8"></script>
-    <script src="js/controllers/public/DetailController.js" charset="UTF-8"></script>
-    <script src="js/controllers/public/ProductsController.js" charset="UTF-8"></script>
-    <script src="js/controllers/public/LoginController.js" charset="UTF-8"></script>
-    <!-- SERVICES -->
-    <script src="js/services/productAPIService.js" charset="UTF-8"></script>
-    <script src="js/services/loginAPIService.js" charset="UTF-8"></script>
-    <!-- CONFIG -->
-    <script src="js/config/routeConfig.js" charset="UTF-8"></script>
-    <script src="js/value/configValue.js" charset="UTF-8"></script>
-    <script src="js/filters/nameFilter.js" charset="UTF-8"></script>
-    <script src="js/filters/ellipsisFilter.js" charset="UTF-8"></script>
-    <script src="js/filters/upperFilter.js" charset="UTF-8"></script>
-    <script src="js/filters/textFilter.js" charset="UTF-8"></script>    
-    <script src="js/interceptors/timestampInterceptor.js" charset="UTF-8"></script>
-    <script src="js/interceptors/errorInterceptor.js" charset="UTF-8"></script>
-    <script src="js/interceptors/loadingInterceptor.js" charset="UTF-8"></script>
-    <script src="js/config/interceptorsConfig.js" charset="UTF-8"></script>
-    <script src="js/config/pageConfig.js" charset="UTF-8"></script>
-    <!--Directives-->    
-    <script src="js/directives/uiAlertDirective.js" charset="UTF-8"></script>
-    <script src="js/directives/uiDateDirective.js" charset="UTF-8"></script>
-    <script src="js/directives/public/headerDirective.js" charset="UTF-8"></script>
-    <script src="js/directives/public/footerDirective.js" charset="UTF-8"></script>
-    <!--Biblioteca Js-->    
-    <script src="lib/portal-theme/js/bootstrap.min.js"></script>
-    <script src="lib/portal-theme/js/mimity.js"></script>
-    <script src="lib/portal-theme/js/select2.js"></script>
-    <script src="lib/portal-theme/js/owl.carousel.min.js"></script>    
-    <script src="lib/portal-theme/js/jquery.ez-plus.min.js"></script>  
-    <script src="lib/portal-theme/js/jquery.bootstrap-touchspin.min.js"></script>    
-    <script src="lib/portal-theme/js/jquery.raty-fa.min.js"></script>    
+    <link href='lib/portal-theme/css/toastr.min.css' rel='stylesheet' type='text/css' />
+
 </head>
+
 <body>
-    <div class="URL_BASE" style="display:none !important;" url=""></div>    
-    <div ng-controller="PublicHeaderController">
-        <div publicHeader></div>
+    <div class="modal-load" ng-show="loading"></div>
+    <div public-header ng-controller="publicHeaderController">
     </div>
     <div class="body">
         <div ng-view></div>
         <div class="bottom-space"></div>
     </div>
-    <div ng-controller="PublicFooterController">
-        <div publicFooter></div>
+    <div public-footer ng-controller="publicFooterController">
     </div>
 </body>
+<!-- ANGULAR -->
+<script src="lib/angular/angular.js" charset="UTF-8"></script>
+<script src="lib/angular/angular-route.js" charset="UTF-8"></script>
+<script src="lib/angular/angular-messages.js" charset="UTF-8"></script>
+<script src="lib/angular/angular-locale_pt-br.js" charset="UTF-8"></script>
+<script src="lib/angular/angular-sanitize.js" charset="UTF-8"></script>
+<script src="lib/ui/ui.js" charset="UTF-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+<script src="js/app.js" charset="UTF-8"></script>
+<!--Directives-->
+<script src="js/directives/public/headerDirective.js" charset="UTF-8"></script>
+<script src="js/directives/public/footerDirective.js" charset="UTF-8"></script>
+<script src="js/directives/admin/headerDirective.js" charset="UTF-8"></script>
+<script src="js/directives/admin/footerDirective.js" charset="UTF-8"></script>
+<!-- CONTROLLER -->
+<script src="js/controllers/public/homeController.js" charset="UTF-8"></script>
+<script src="js/controllers/public/headerController.js" charset="UTF-8"></script>
+<script src="js/controllers/public/footerController.js" charset="UTF-8"></script>
+<script src="js/controllers/public/detailController.js" charset="UTF-8"></script>
+<script src="js/controllers/public/productsController.js" charset="UTF-8"></script>
+<script src="js/controllers/public/loginController.js" charset="UTF-8"></script>
+<!-- SERVICES -->
+<script src="js/services/productAPIService.js" charset="UTF-8"></script>
+<script src="js/services/loginAPIService.js" charset="UTF-8"></script>
+<script src="js/services/userAPIService.js" charset="UTF-8"></script>
+<script src="js/authentication/authService.js" charset="UTF-8"></script>
+<!-- CONFIG -->
+<script src="js/config/routeConfig.js" charset="UTF-8"></script>
+<script src="js/value/configValue.js" charset="UTF-8"></script>
+<script src="js/config/interceptorsConfig.js" charset="UTF-8"></script>
+<!--Interceptors-->
+<script src="js/interceptors/timestampInterceptor.js" charset="UTF-8"></script>
+<script src="js/interceptors/errorInterceptor.js" charset="UTF-8"></script>
+<script src="js/interceptors/loadingInterceptor.js" charset="UTF-8"></script>
+<script src="js/interceptors/authInterceptor.js" charset="UTF-8"></script>
+<!--Filters-->
+<script src="js/filters/nameFilter.js" charset="UTF-8"></script>
+<script src="js/filters/ellipsisFilter.js" charset="UTF-8"></script>
+<script src="js/filters/upperFilter.js" charset="UTF-8"></script>
+<script src="js/filters/textFilter.js" charset="UTF-8"></script>
+<!--Biblioteca Js-->
+<script src="lib/portal-theme/js/bootstrap.min.js" charset="UTF-8"></script>
+<script src="lib/portal-theme/js/mimity.js" charset="UTF-8"></script>
+<script src="lib/portal-theme/js/select2.js" charset="UTF-8"></script>
+<script src="lib/portal-theme/js/owl.carousel.min.js" charset="UTF-8"></script>
+<script src="lib/portal-theme/js/jquery.ez-plus.min.js" charset="UTF-8"></script>
+<script src="lib/portal-theme/js/jquery.bootstrap-touchspin.min.js" charset="UTF-8"></script>
+<script src="lib/portal-theme/js/jquery.raty-fa.min.js" charset="UTF-8"></script>
+<script src="lib/portal-theme/js/toastr.min.js" type="text/javascript" charset="UTF-8"></script>
+
 </html>
