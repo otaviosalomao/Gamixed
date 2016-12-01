@@ -27,14 +27,12 @@
 
 <body>
     <div class="modal-load" ng-show="loading"></div>
-    <div public-header ng-controller="publicHeaderController">
-    </div>
+    <div header ng-controller="headerController"></div>    
     <div class="body">
         <div ng-view></div>
         <div class="bottom-space"></div>
-    </div>
-    <div public-footer ng-controller="publicFooterController">
-    </div>
+    </div>    
+    <div footer ng-controller="footerController"></div>
 </body>
 <!-- ANGULAR -->
 <script src="lib/angular/angular.js" charset="UTF-8"></script>
@@ -46,10 +44,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
 <script src="js/app.js" charset="UTF-8"></script>
 <!--Directives-->
-<script src="js/directives/public/headerDirective.js" charset="UTF-8"></script>
-<script src="js/directives/public/footerDirective.js" charset="UTF-8"></script>
-<script src="js/directives/admin/headerDirective.js" charset="UTF-8"></script>
-<script src="js/directives/admin/footerDirective.js" charset="UTF-8"></script>
+<script src="js/directives/headerDirective.js" charset="UTF-8"></script>
+<script src="js/directives/footerDirective.js" charset="UTF-8"></script>
 <!-- CONTROLLER -->
 <script src="js/controllers/public/homeController.js" charset="UTF-8"></script>
 <script src="js/controllers/public/headerController.js" charset="UTF-8"></script>
@@ -64,8 +60,9 @@
 <script src="js/authentication/authService.js" charset="UTF-8"></script>
 <!-- CONFIG -->
 <script src="js/config/routeConfig.js" charset="UTF-8"></script>
-<script src="js/value/configValue.js" charset="UTF-8"></script>
+<script src="js/config/pageConfig.js" charset="UTF-8"></script>
 <script src="js/config/interceptorsConfig.js" charset="UTF-8"></script>
+<script src="js/value/configValue.js" charset="UTF-8"></script>
 <!--Interceptors-->
 <script src="js/interceptors/timestampInterceptor.js" charset="UTF-8"></script>
 <script src="js/interceptors/errorInterceptor.js" charset="UTF-8"></script>

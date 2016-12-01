@@ -30,7 +30,8 @@ app.config(function ($routeProvider) {
 
     $routeProvider.when("/admin", {
         templateUrl: "view/admin/home.html",
-        controller: "LoginController"
+        controller: "LoginController",
+        authorize : true
     });
 
     //DEFAULT

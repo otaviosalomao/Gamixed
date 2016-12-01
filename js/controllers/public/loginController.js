@@ -2,8 +2,12 @@ app.controller("LoginController", function($scope,$location, loginAPI, userAPI, 
 	$scope.Login = new Object();	
 	$scope.submit = function(){					
 		loginAPI.login($scope.Login.email, $scope.Login.password).then(function successCallback(response){					
-			authService.setToken(response.data);
-			authService.setLocalToken(response.data);
+			var autenticacao = response.data;
+			userAPI.getById(autenticacao.user_id).then(function successCallback(response){
+    			autenticacao.nomeUsuario = response.data.name;
+    		});
+			authService.setToken(autenticacao);
+			authService.setLocalToken(autenticacao);			
 			$location.path("/admin");
 		});
 	}

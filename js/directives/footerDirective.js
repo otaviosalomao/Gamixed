@@ -1,4 +1,4 @@
-﻿app.directive("publicFooter", function () {    
+﻿app.directive("footer", function () {    
     return {
         restrict: 'A',
         replace: true,

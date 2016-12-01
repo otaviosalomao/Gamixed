@@ -17,14 +17,16 @@
                     <div class="pull-left hidden-xs"><a href="#"><i class="fa fa-envelope"></i> gamixed@gamixed.com</a></div>
                     <div class="pull-right header-account">
                         <div class="dropdown">
-                            <a href="#" class="dropdown-toggle" id="dropdownAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span><i class="fa fa-user"></i> Minha Conta <i class="fa fa-caret-down"></i></span>
+                            <a href="" class="dropdown-toggle" id="dropdownAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span ng-if="!isLogged()"><i class="fa fa-user"></i> Minha Conta <i class="fa fa-caret-down"></i></span>
+                                <span ng-if="isLogged()"><i class="fa fa-user"></i> {{nomeUsuario}} <i class="fa fa-caret-down"></i></span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownAccount">
-                                <li><a href="#/login">Login</a></li>
+                                <li ng-if="!isLogged()"><a href="#/login">Login</a></li>
+                                <li ng-if="isLogged()"><a href="#/home">Logout</a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
             </div>
         </div>
@@ -67,7 +69,8 @@
                 <div class="collapse navbar-collapse" id="navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="/">Home</a></li>
-                        <li><a href="#/products">Produtos</a></li>                      
+                        <li><a href="#/products">Produtos</a></li>  
+                        <li><a href="#/users" ng-if="isLogged()">Usuário</a></li>  
                     </ul>
                 </div>
             </div>

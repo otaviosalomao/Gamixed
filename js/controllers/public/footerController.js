@@ -1,6 +1,6 @@
-﻿app.controller("publicFooterController", function ($scope, $location) {
-	
+﻿app.controller("footerController", function ($scope, $location) {	
     $scope.isActive = function (viewLocation) {
         return viewLocation === $location.url();
     };
+    
 });

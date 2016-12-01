@@ -1,4 +1,4 @@
-﻿app.directive('publicHeader', function () {    
+﻿app.directive("header", function () {    
     return {
         restrict: 'A',
         replace: true,
