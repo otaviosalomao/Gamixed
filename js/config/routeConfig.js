@@ -34,6 +34,12 @@ app.config(function ($routeProvider) {
         authorize : true
     });
 
+     $routeProvider.when("/users", {
+        templateUrl: "view/admin/users.html",
+        controller: "UserController",
+        authorize : true
+    });
+
     //DEFAULT
 
      $routeProvider.otherwise({ redirectTo: "/home" });

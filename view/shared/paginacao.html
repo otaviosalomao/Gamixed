@@ -1,0 +1,22 @@
+﻿<div ng-controller="PaginacaoController">
+    <div class="col-md-8" >
+        <div class="form-inline">
+            <div class="btn-group" role="group" >
+                <button class="btn btn-xs btn-default" ng-click="FirstPage()" title="Primeira Página"><i><<</i></button>
+                <button class="btn btn-xs btn-default" ng-click="PreviousPage()" title="Página Anterior"><i><</i></button>
+                <button type="button" class="btn btn-xs btn-default"><span id="currentPage"></span>{{PaginaAtual}} / {{totalPaginas}}<span id="lastPage"></span></button>
+                <button class="btn btn-xs btn-default" ng-click="NextPage()" title="Próxima Página"><i>></i></button>
+                <button class="btn btn-xs btn-default" ng-click="LastPage()" title="Última Página"><i>>></i></button>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 pull-right">
+        <label class="pull-right">
+            Itens
+            <strong>{{registrosDe}}</strong> ao
+            <strong>{{registrosAte}}</strong> de
+            <strong>{{totalRegistro}}</strong>
+        </label>
+    </div>
+</div>
