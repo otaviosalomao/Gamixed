@@ -2,8 +2,7 @@
 
     $rootScope.$on('$routeChangeStart', function (event, next, current) {
         if (next.authorize) {
-            if (!authService.getToken()) {
-                
+            if (!authService.getToken()) {                
                 $rootScope.$evalAsync(function () {
                     toastr.error('', "Sess&atilde;o expirada, por favor faça o login novamente.");
                     $location.path('/home');
